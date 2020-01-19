@@ -1,15 +1,15 @@
 # A Simple Event System
 
-Recently, I needed to develop an event system as part of a bigger C++ project. As I was not using any specific framework that offers such a functionality (e.g., .Net), I had to come up with a simple and quick solution. After some search, I found [this Github project](https://github.com/rafeloken/event_system) which offers a clean implementation of a basic event system using the [Observer pattern](https://www.tutorialspoint.com/design_pattern/observer_pattern.htm). Then, I decided to rewrite, improve and document some portions of the original code. I added especially the `EventArgs` class which allows to pass custom event arguments to all the event subscribers.
+Recently, I needed to develop an event system as part of a bigger C++ project. As I was not using any specific framework that offers such a functionality (e.g., .Net), I had to come up with a simple and quick solution. After some search, I found [this Github project](https://github.com/rafeloken/event_system) which offers a clean implementation of a basic event system using the [Observer pattern](https://www.tutorialspoint.com/design_pattern/observer_pattern.htm). Then, I decided to rewrite, improve and document some portions of the original code. I especially added the `EventArgs` class which allows to pass custom event arguments to all the event subscribers.
 
 ## The Observer Pattern
 
-The event system is an implementation of the Observer pattern. The latter defines an entity called `Subject` which maintains a list of subscribers called `Observer`s. The subject notifies the observers automatically whenever an internal state changes. This notification occurs through calling a specific method of the `Observer` entity. The UML diagram in the following figure shows how the `Subject` and `Observer` entities are structured.
+The event system is an implementation of the [Observer pattern](https://www.tutorialspoint.com/design_pattern/observer_pattern.htm). The latter defines an entity called `Subject` which maintains a list of subscribers called `Observer`s. The `Subject` notifies the observers automatically whenever an internal state changes. This notification occurs through calling a specific method of the `Observer` entity. The UML diagram in the following figure shows how the `Subject` and `Observer` entities are structured.
 
 ![Observer pattern UML diagram](./resources/Observer_w_update.svg) <br/>
 *UML diagram of the Observer pattern* (Source: [wikipedia](https://en.wikipedia.org/wiki/Observer_pattern#UML_class_diagram))
 
-In this implementation, the `Subject` is implemented in the `Event` class. However, the `Observer` is implemented in the `EventHandler` class.
+In this implementation, the `Subject` is represented by the `Event` class. However, the `Observer` is represented by the `EventHandler` class.
 
 ## Getting Started
 
@@ -34,7 +34,7 @@ event += callback_2;
 // and implemented beforehand
 ```
 
-To raise an event, an instance of `EventArgs` should be created and passed to the event instance:
+To raise an event, an instance of the `EventArgs` class should be created and passed to the event instance:
 
 ```cpp
 // Create an EventArgs instance to pass any custom arguments
@@ -56,7 +56,7 @@ To build the code under Linux, run the following command in the root folder:
 ```bash
 make
 ```
-The [Makefile](./Makefile) creates a build directory and stores all object files and output executable in that folder.
+The [Makefile](./Makefile) creates a build directory and saves all object files and output executable in that folder.
 
 ## Built With
 
