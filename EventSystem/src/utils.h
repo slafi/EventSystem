@@ -32,5 +32,8 @@ namespace Events
 		const char* get_exception_message() const;
 	};
 
+	/**
+	 * Returns the local date and time as a string.
+	 */
 	std::string format_timestamp();
 }

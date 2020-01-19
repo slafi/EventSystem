@@ -1,10 +1,3 @@
-/**
-*
-*	This file holds the definition of the class Event.
-*
-*	Author: Sabeur Lafi
-*	Created on: 14/01/2020
-*/
 
 #pragma once
 #include <vector>
