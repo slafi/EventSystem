@@ -8,7 +8,7 @@
 
 PROG = main
 CC = g++
-FLAGS = -g -Wall
+CPPFLAGS = -g -Wall
 
 SOURCEDIR = EventSystem/src
 BUILDDIR = EventSystem/build
